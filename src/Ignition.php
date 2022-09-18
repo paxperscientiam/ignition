@@ -320,7 +320,7 @@ class Ignition
             $this->customHtmlBody
         );
 
-        (new Renderer())->render(['viewModel' => $viewModel, 'returnAsString' => $this->returnAsString]);
+        (new Renderer())->render(['viewModel' => $viewModel], $this->returnAsString);
     }
 
     /**
