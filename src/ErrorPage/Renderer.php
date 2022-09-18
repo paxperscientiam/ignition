@@ -9,7 +9,7 @@ class Renderer
      *
      * @return void
      */
-    public function render(array $data, bool $return = false): ?string
+    public function render(array $data, bool $return = false): int|bool|string
     {
         $viewFile = __DIR__ . '/../../resources/views/errorPage.php';
 
@@ -20,6 +20,6 @@ class Renderer
             include $viewFile;
             return ob_get_clean();
         }
-        include $viewFile;
+        return include $viewFile;
     }
 }
