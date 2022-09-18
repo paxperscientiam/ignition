@@ -28,6 +28,8 @@ class Ignition
     protected Flare $flare;
 
     protected bool $shouldDisplayException = true;
+    
+    protected bool $returnAsString = false;
 
     protected string $flareApiKey = '';
 
@@ -126,6 +128,13 @@ class Ignition
     {
         $this->shouldDisplayException = $shouldDisplayException;
 
+        return $this;
+    }
+    
+    public function returnAsString(bool $returnAsString): self
+    {
+        $this->returnAsString = $returnAsString;
+        
         return $this;
     }
 
